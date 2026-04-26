@@ -8,6 +8,50 @@ outline: none;
 font-family: 'Poppins', sans-serif;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 200;
+}
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+/* Mobile responsive */
+@media (max-width: 995px) {
+    .hamburger {
+        display: flex;
+    }
+    nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 100vh;
+        background-color: #111;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        border-left: 3px solid #b74b4b;
+        z-index: 150;
+    }
+    nav.open {
+        display: flex;
+    }
+    nav a {
+        font-size: 2rem;
+        margin: 0;
+    }
+}
 html{
     font-size: 62.5%;
 }
