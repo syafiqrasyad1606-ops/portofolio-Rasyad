@@ -6,6 +6,19 @@
     <link rel="stylesheet" href="style.css">
     <title>Portofolio web</title>
 </head>
+    <script>
+    function toggleMenu() {
+        const nav = document.getElementById('navbar');
+        nav.classList.toggle('open');
+    }
+
+    // Tutup menu saat link diklik
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('navbar').classList.remove('open');
+        });
+    });
+</script>
 <body>
     <header>
         <a href="#" class="logo">Rasyad</a>
@@ -18,6 +31,23 @@
             <a href="#projects">Projects</a>
         </nav>
     </header>
+
+    <header>
+    <a href="#" class="logo">Rasyad</a>
+    <nav id="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#contact">Contact</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+    </nav>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
 
     <section class="home" id="home">
         <div class="home-img">
