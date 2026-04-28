@@ -24,6 +24,33 @@ font-family: 'Poppins', sans-serif;
     transition: 0.3s ease;
 }
 
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #b74b4b;
+    color: #b74b4b;
+    font-size: 1.8rem;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    background-color: #b74b4b;
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px #b74b4b;
+}
+
 /* Mobile responsive */
 @media (max-width: 995px) {
     .hamburger {
